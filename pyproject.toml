@@ -6,13 +6,13 @@ name = "lustre-server"
 version = "0.0.1"
 requires-python = "==3.14.*"
 dependencies = [
-    "ops ~= 3.8.1",
+    "ops ~= 3.9.0",
     "pydantic>=2",
     "charmlibs-apt ~= 1.0",
     "charmlibs-systemd ~= 1.0",
     "charmed-hpc-libs[ops] ~= 0.1",
     "lustre-ops",
-    "tenacity >= 8.2,< 10.0",
+    "tenacity >= 9.2.1,< 10.0",
 ]
 
 [project.optional-dependencies]
@@ -28,11 +28,13 @@ dev = [
 
   # Integration
   "jubilant",
-  "pytest ~= 9.0",
+  # pytest-bdd 8.x is incompatible with pytest 9.2. Lift this cap, and move to
+  # pytest-bdd 9.x, once pytest-jubilant-bdd supports pytest-bdd 9.
+  "pytest ~= 9.0, < 9.2",
   "pytest-bdd ~= 8.0",
-  "pytest-jubilant-bdd ~= 0.14",
-  "pytest-order ~= 1.1",
-  "pytest-mock ~= 3.15",
+  "pytest-jubilant-bdd ~= 0.20",
+  "pytest-order ~= 1.5",
+  "pytest-mock ~= 3.17",
 
   # TiCS scan dependencies
   "flake8",

@@ -10,7 +10,7 @@ dependencies = [
     "pydantic>=2",
     "charmlibs-apt ~= 1.0",
     "charmlibs-systemd ~= 1.0",
-    "charmed-hpc-libs[ops] ~= 0.1",
+    "charmed-hpc-libs[ops] ~= 0.8",
     "lustre-ops",
     "tenacity >= 9.2.1,< 10.0",
 ]

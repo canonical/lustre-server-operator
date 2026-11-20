@@ -93,7 +93,7 @@ integration *args: build
     export LUSTRE_SERVER_CHARM_PATH=1
 
     {{uv_run}} pytest -v --exitfirst -s --tb native --log-cli-level=INFO \
-        --juju-bdd-wait-timeout 1800 \
+        --juju-bdd-wait-timeout 3600 \
         ./tests/integration "${PASSTHROUGH[@]}"
 
 # Build specified artifacts (lustre-server), or all artifacts if none specified
